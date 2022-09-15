@@ -1,14 +1,27 @@
+# version: 0.0
+# os: linux
+# files:
+#   - source: /
+#     destination: /home/ec2-user
+# hooks:
+#   AfterInstall:
+#     - location: afterinstall.sh
+#       timeout: 100
+#       runas: ec2-user
+#   ApplicationStart:
+#     - location: applicationstart.sh
+#       timeout: 100
+#       runas: ec2-user
+
 version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user
+    destination: /home/ubuntu
 hooks:
   AfterInstall:
     - location: afterinstall.sh
       timeout: 100
-      runas: ec2-user
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 100
-      runas: ec2-user
